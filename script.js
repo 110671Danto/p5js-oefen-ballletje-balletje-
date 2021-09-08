@@ -1,36 +1,48 @@
-var x, y, v, h;
 
-function setup() {
-	createCanvas(500, 400);
+class Ball {
+  constructor(x, y, w, h, vx, vy) {
+    this.x = x; 
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.vx = vx;
+    this.vy = vy;
+  }
+
+  drawBall() {
+    ellipse(this.x, this.y, this.w, this.h, this.vx, this.vy);
+    this.x = this.x + this.vx;
+    this.y = this.y + this.vy;
+
+    if (this.x <= 20 || this.x >= 300) {
+      vx = vx * -1;
+    }
+    if (this.x <= 20 || this.y >= 300) {
+      vy = vy * -1;
+    }
+      
 
 
-  x = 50;
-  y = 50;
-  v = 6;
-  h = 2;
+    }
 
-  
+    
+    
+
+  }
+
+
+} 
+
+function setup(){
+  createCanvas(500, 400);
+  ball1 = new Ball(10,10,30,30,5,5);
+  ball2 = new Ball(100,200,30,30,5,5);
 }
 
 function draw() {
 	background(225);
-  
-  ellipse(x,y,50,50); {
-  x = x + v;
-  y = y + h;
-  }
-
- 
-  if(x <= 24 || x >= 476) {
-    v = v * -1;
-  }
-  if(y <= 24 || y >= 376) {
-    h = h * -1;
-  }
-
-
+  ball1.drawBall();
+  ball2.drawBall();
 }
-
-
 
 
