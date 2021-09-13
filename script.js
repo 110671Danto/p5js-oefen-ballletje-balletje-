@@ -25,13 +25,17 @@ class Ball {
 
 function setup(){
   createCanvas(500, 400);
-  ball1 = new Ball(140,140,30,30,5,5);
-  ball2 = new Ball(100,200,30,30,5,5);
+  ball1 = new Ball(40,30,30,30,5,5);
+  ball2 = new Ball(100,340,50,50,5,5);
+  ball3 = new Ball(240,20,70,70,5,5);
+  ball4 = new Ball(440,60,60,60,5,5);
 }
 
 
 function draw() {
 	background(225);
   ball1.drawBall();
-  ball2.drawBall();  
+  ball2.drawBall(); 
+  ball3.drawBall();
+  ball4.drawBall();
 }
