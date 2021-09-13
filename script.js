@@ -1,4 +1,3 @@
-
 class Ball {
   constructor(x, y, w, h, vx, vy) {
     this.x = x; 
@@ -7,12 +6,13 @@ class Ball {
     this.h = h;
     this.vx = vx;
     this.vy = vy;
-  } 
+  }
 
   drawBall() {
     ellipse(this.x, this.y, this.w, this.h, this.vx, this.vy);
     this.x = this.x + this.vx;
     this.y = this.y + this.vy;
+
 
     if (this.x <= 20 || this.x >= 480) {
       this.vx = this.vx * -1;
@@ -37,5 +37,3 @@ function draw() {
   ball2.drawBall();
   ball3.drawBall()
 }
-
-
