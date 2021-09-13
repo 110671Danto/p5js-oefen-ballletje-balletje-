@@ -7,7 +7,7 @@ class Ball {
     this.h = h;
     this.vx = vx;
     this.vy = vy;
-  }
+  } 
 
   drawBall() {
     ellipse(this.x, this.y, this.w, this.h, this.vx, this.vy);
